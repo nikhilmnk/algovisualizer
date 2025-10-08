@@ -7,6 +7,7 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 5000,
   },
+  base: '/algo-visualizer/', 
   plugins: [
     react(),
 
