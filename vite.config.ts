@@ -7,7 +7,7 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 5000,
   },
-  base: '/algovisualizer/', 
+  base: process.env.NODE_ENV === 'production' ? '/algovisualizer/' : '/',
   plugins: [
     react(),
 

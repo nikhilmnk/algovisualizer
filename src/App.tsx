@@ -6,7 +6,7 @@ import AlgorithmVisualization from './pages/AlgorithmVisualization';
 function App() {
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.NODE_ENV === 'production' ? '/algovisualizer' : '/'}>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/algorithm/:algorithmId" element={<AlgorithmVisualization />} />
